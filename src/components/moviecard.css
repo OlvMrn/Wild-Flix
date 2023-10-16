@@ -1,0 +1,22 @@
+*{
+  list-style: none;
+}
+
+.movie-card {
+  display: grid;
+  border: solid;
+  align-items: center;
+}
+
+.movie-card-body {
+  background-color: aqua;
+}
+
+img {
+  height: 15rem;
+}
+
+.fav-icon {
+  margin: auto;
+  
+}
