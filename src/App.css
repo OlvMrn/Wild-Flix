@@ -42,5 +42,13 @@
 }
 
 .movies-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
+}
+
+.favorites-container {
   display: flex;
+  justify-content: space-around;
 }

@@ -3,13 +3,17 @@
 }
 
 .movie-card {
-  display: grid;
-  border: solid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
+.movie-card:hover {
+  box-shadow: 5px 5px 16px 16px #b8b4f9;
+}
+
 .movie-card-body {
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 img {
@@ -18,5 +22,6 @@ img {
 
 .fav-icon {
   margin: auto;
-  
+  font-size: 2rem;
+  cursor: pointer;
 }
