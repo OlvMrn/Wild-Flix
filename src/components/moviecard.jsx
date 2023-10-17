@@ -1,7 +1,7 @@
-import { useState } from 'react';
 import './moviecard.css'
 import { BsBookmarkPlus } from "react-icons/bs"
 import { BsFillBookmarkHeartFill } from "react-icons/bs"
+import { VscTriangleDown } from "react-icons/vsc";
 
 function MovieCard({title, year, genre, director, summary, img, id, favorite ,setFav}) {
   return(
@@ -20,7 +20,12 @@ function MovieCard({title, year, genre, director, summary, img, id, favorite ,se
             <li>Genre: {genre}</li>
             <li>Réalisateur: {director}</li>
           </ul>
-          <p>{summary}</p>
+          <details>
+            <p>{summary}</p>
+            <summary>
+            <div className='synopsis'>Synopsis : <VscTriangleDown /></div>
+            </summary>
+          </details>
         </div>
         : ""
       }

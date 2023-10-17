@@ -9,7 +9,7 @@
 }
 
 .movie-card:hover {
-  box-shadow: 5px 5px 16px 16px #b8b4f9;
+  box-shadow: 0px 0px 10px 10px #a2c0f1;
 }
 
 .movie-card-body {
@@ -21,7 +21,13 @@ img {
 }
 
 .fav-icon {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 2rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.synopsis {
   cursor: pointer;
 }

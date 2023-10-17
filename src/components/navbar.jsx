@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import './navbar.css'
 
-function NavBar({filters, setGenre}) {
+function NavBar({moviesData, filters, setGenre, setSearchedMovie}) {
 
   const [selectedGenre, setSelectedGenre] = useState("");
 
@@ -14,14 +15,18 @@ function NavBar({filters, setGenre}) {
     }
   }
   
+  const handleSearch = (title) => {
+    setSearchedMovie(title);
+  }
+
   return(
     <>
-    <div>NAVBAR</div>
+    <h1>WILDFLIX</h1>
+    <input type='text' placeholder='Rechercher un film' onChange={(e) => handleSearch(e.target.value)} />
     <div className="filters-buttons">
       {filters.map((genre) => (
         <button key={genre} onClick={() => handleGenreClick(genre)}>{genre}</button>
       ))}
-
     </div>
     </>
   );
