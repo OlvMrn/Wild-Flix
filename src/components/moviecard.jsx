@@ -1,9 +1,13 @@
+import { useState } from 'react'
 import './moviecard.css'
 import { BsBookmarkPlus } from "react-icons/bs"
 import { BsFillBookmarkHeartFill } from "react-icons/bs"
-import { VscTriangleDown } from "react-icons/vsc";
+import { VscTriangleDown } from "react-icons/vsc"
+import { VscTriangleUp } from "react-icons/vsc"
 
 function MovieCard({title, year, genre, director, summary, img, id, favorite ,setFav}) {
+  const [clicked, setClicked] = useState(false)
+
   return(
     <div className='movie-card'>
       <div className='movie-card-head'>
@@ -23,7 +27,7 @@ function MovieCard({title, year, genre, director, summary, img, id, favorite ,se
           <details>
             <p>{summary}</p>
             <summary>
-            <div className='synopsis'>Synopsis : <VscTriangleDown /></div>
+            <div className='synopsis' onClick={() => setClicked(!clicked)}>Synopsis : {!clicked ? <VscTriangleDown /> : <VscTriangleUp />}</div>
             </summary>
           </details>
         </div>
